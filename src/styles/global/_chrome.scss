@@ -1,0 +1,210 @@
+/*
+/* CHROME
+/*-----------------------------------------------------*/
+
+html, body {
+	height: 100%;
+	min-height: 100%;
+}
+
+#wrapper {
+	width: 100%;
+	min-width: 320px;
+	background: #fff;
+	position: relative;
+	-webkit-transition: -webkit-transform .4s;
+	-moz-transition: -moz-transform .4s;
+	-ms-transition: -ms-transform .4s;
+	-o-transition: -o-transform .4s;
+	transition: transform .4s;
+
+	&.menu-active {
+		@include prefix(transform, translate3d(280px, 0px, 0px));
+	}
+
+}
+
+
+
+/**
+*	header
+**/
+
+#header {
+	width: 100%;
+	position: absolute;
+	z-index: 3;
+
+	.header-inner {
+		width: 320px;
+		height: 60px;
+		margin: 0 auto;
+		padding: 20px 20px 0 20px;
+		position: relative;
+		@include clearfix;
+		@include prefix(box-sizing, border-box);
+
+		.icon-menu {
+			position: absolute;
+			left: 20px;
+			top: 30px;
+		}
+
+		.logo-WordFly {
+			position: absolute;
+			left: 64px;
+			top: 30px;
+		}
+
+		.utility-nav {
+			float: right;
+
+			.btn {
+				margin-right: 10px;
+			}
+
+			.sign-in {
+				color: $link-color-alt;
+				font-family: $font-alt;
+				font-size: 18px;
+				line-height: 18px;
+				&:hover,
+				&:focus,
+				&.current {
+					color: #a0d0f1;
+					text-decoration: none;
+				}		
+			}
+
+		}
+
+	}
+
+}
+
+/*** /header ***/
+
+
+/**
+*	footer
+**/
+
+#footer {
+	width: 100%;
+	background: #fff;
+	position: relative;
+	z-index: 2;
+
+	.footer-inner {
+		width: 320px;
+		height: 140px;
+		margin: 0 auto;
+		padding: 20px;
+		position: relative;
+		@include clearfix;
+		@include prefix(box-sizing, border-box);
+
+		.share-nav {
+			margin-bottom: 4px;
+			.social-btn,
+			.social-btn-alt {
+				margin-right: 8px;
+			}
+		}
+
+		p {
+			font-size: 11px;
+			line-height: 14px;
+			margin: 8px 0 0 0;
+		}
+
+	}
+
+}
+
+/*** /footer ***/
+
+
+/**
+*	content
+**/
+
+#content {
+	width: 100%;
+	position: relative;
+	z-index: 1;
+
+	.content-section {
+		width: 100%;
+
+		.content-inner {
+			width: 320px;
+			margin: 0 auto;
+			padding: 32px 20px;
+			position: relative;
+			@include clearfix;
+			@include prefix(box-sizing, border-box);
+		}
+
+		&.banner {
+			background: #3e749a url('#{$image-path}/bg-banner-mobi.jpg') no-repeat center top;
+			.content-inner {
+				height: 320px;
+				padding-top: 80px;
+				text-align: center;
+
+				h1 {
+					color: $text-titles;
+				}
+
+			}
+
+		}
+
+		&.intro {
+
+			.content-inner {
+				text-align: center;
+				padding-top: 80px;
+
+				h2 {
+					color: $text-headers-alt;
+				}
+
+			}
+
+		}
+
+		&.alt {
+			background-color: #f7f5f1;
+		}
+
+		&.cta {
+			background-color: #3e749a;
+
+			.content-inner {
+				text-align: center;
+
+				h2 {
+					color: $text-secondary;
+					font-size: 28px;
+				}
+
+				p {
+					color: $text-secondary;
+				}
+
+			}
+
+		}
+
+	}
+
+}
+
+/*** /content ***/
+
+
+@import "chrome-mq";
+
+@import "menu";

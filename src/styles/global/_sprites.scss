@@ -1,0 +1,125 @@
+/*
+/* SPRITES
+/*-----------------------------------------------------*/
+
+.logo-WordFly {
+	display: inline-block;
+	width: 22px;
+	height: 19px;
+	@include hide-text;
+	background: transparent url('#{$image-path}/sprites.png') no-repeat -140px 0;
+}
+
+.icon-menu {
+	display: inline-block;
+	width: 24px;
+	height: 20px;
+	@include hide-text;
+	background: transparent url('#{$image-path}/sprites.png') no-repeat -170px 0;
+}
+
+.icon-closeX {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	@include hide-text;
+	background: transparent url('#{$image-path}/sprites.png') no-repeat -200px 0;
+}
+
+.social-btn, .social-btn-alt {
+	display: inline-block;
+	width: 42px;
+	height: 42px;
+	border: 2px solid #fff;
+	border-radius: 50%;
+	@include hide-text;
+	background: transparent url('#{$image-path}/sprites.png') no-repeat border-box 0 0;
+	@include prefix(box-sizing, border-box);
+}
+
+.social-btn {
+	background-color: rgba(255,255,255,0.1);
+
+	&.btn-twitter {
+		background-position: 0 -40px;
+	}
+
+	&.btn-facebook {
+		background-position: -50px -40px;
+	}
+
+	&.btn-apple {
+		background-position: -100px -40px;
+	}
+
+	&.btn-android {
+		background-position: -150px -40px;
+	}
+
+	&:hover, &:focus {
+		background-color: rgba(255,255,255,0);
+	}
+
+}
+
+.social-btn-alt {
+	border-color: #3e749a;
+	background-color: rgba(62,116,154,0);
+
+	&.btn-twitter {
+		background-position: 0 -90px;
+	}
+
+	&.btn-facebook {
+		background-position: -50px -90px;
+	}
+
+	&:hover, &:focus {
+		background-color: rgba(62,116,154,0.1);
+	}
+
+}
+
+.social-icon {
+	display: inline-block;
+	width: 22px;
+	height: 22px;
+	@include hide-text;
+	background: transparent url('#{$image-path}/sprites.png') no-repeat 0 0;
+	opacity: 0.8;
+
+	&.icon-twitter {
+		background-position: -10px -50px;
+	}
+
+	&.icon-facebook {
+		background-position: -60px -50px;
+	}
+
+	&.icon-apple {
+		background-position: -110px -50px;
+	}
+
+	&.icon-android {
+		background-position: -160px -50px;
+	}
+
+	&:hover, &:focus {
+		opacity: 1.0;
+	}
+
+}
+
+
+
+
+@include respond-to(medium) {
+
+	.logo-WordFly {
+		width: 132px;
+		height: 33px;
+		background-position: 0 0;
+	}
+
+}
+

@@ -1,0 +1,107 @@
+/*
+/* FEATURES
+/*-----------------------------------------------------*/
+
+
+@include respond-to(small) {
+
+	.features-list {
+		h2 {}
+		ul {
+			> li {
+				float: left;
+				width: 220px;
+				padding-right: 20px;
+			}
+			> li:nth-child(odd) {
+				clear: left;
+			}
+		}
+	}
+
+}
+
+
+// @include respond-to(medium) {
+
+// 	.features-list {
+// 		h2 {}
+// 		ul {
+// 			> li {
+				
+// 			}
+// 		}
+// 	}
+
+// }
+
+
+@include respond-to(large) {
+
+	.features-list {
+		h2 {
+			float: left;
+			width: 220px;
+			padding-right: 20px;
+		}
+		ul {
+			float: left;
+			width: 460px;
+			> li {
+				float: left;
+				width: 230px;
+				padding-right: 20px;
+			}
+			> li:nth-child(odd) {
+				clear: left;
+			}
+		}
+	}
+
+}
+
+
+// @include respond-to(xlarge) {
+
+// 	.features-list {
+// 		h2 {}
+// 		ul {
+// 			> li {
+				
+// 			}
+// 		}
+// 	}
+
+// }
+
+
+@include respond-to(xxlarge) {
+
+	.pic-ipad-iphone {
+		height: 352px;
+		background-image: url('#{$image-path}/pic-ipad-iphone-desk.png');
+		top: -252px;
+	}
+
+	.features-list {
+		h2 {
+			width: 250px;
+			padding-right: 40px;
+		}
+		ul {
+			width: 750px;
+			> li {
+				width: 250px;
+				padding-right: 40px;
+			}
+			> li:nth-child(odd) {
+				clear: none;
+			}
+			> li:nth-child(3n+1) {
+				clear: left;
+			}
+		}
+	}
+
+}
+

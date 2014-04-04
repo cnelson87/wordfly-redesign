@@ -1,0 +1,40 @@
+/*
+/* FEATURES
+/*-----------------------------------------------------*/
+
+#features-page {}
+
+.pic-ipad-iphone {
+	display: block;
+	width: 100%;
+	height: 180px;
+	background: transparent url('#{$image-path}/pic-ipad-iphone-mobi.png') no-repeat center top;
+	position: absolute;
+	left: 0;
+	top: -128px;
+}
+
+.features-list {
+	@include clearfix;
+
+	h2 {
+		@include prefix(box-sizing, border-box);
+	}
+
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	
+		> li {
+			margin: 0 0 1.5em 0;
+			@include prefix(box-sizing, border-box);
+		}
+
+	}
+
+}
+
+
+@import "features-mq";
+

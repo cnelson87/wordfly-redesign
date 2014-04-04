@@ -1,0 +1,101 @@
+
+// MIXINS
+//-------------------------------------------------------
+
+// Prefix properties and values 
+//  - also emits rule without prefix
+// ----------------------------------------
+
+$default-prefixes: -webkit-, -moz-, -ms-, -o-;
+
+@mixin prefix($property, $value, $prefixes: $default-prefixes) {
+	
+	// Unquote the values
+	$property : unquote($property);
+	$value    : unquote($value);
+	
+	// Loop through the prefixes given
+	@each $prefix in $prefixes {
+		#{$prefix}#{$property}:$value;
+	}
+	#{$property}:$value;
+}
+
+
+// ClearFix mixin to use on especific rules
+@mixin clearfix {
+	&:after {
+		content:"";
+		display:table;
+		clear:both;
+	}
+}
+
+
+// Hide the text of the target container
+@mixin hide-text {
+	text-indent: 200%;
+	white-space: nowrap;
+	overflow: hidden;
+ }
+
+
+// Usage: @include calc(left, "50% - 700px/2");
+@mixin calc($property, $expression) { 
+	#{$property}: -webkit-calc(#{$expression}); 
+	#{$property}: -moz-calc(#{$expression}); 
+	#{$property}: -ms-calc(#{$expression}); 
+	#{$property}: -o-calc(#{$expression}); 
+	#{$property}: calc(#{$expression}); 
+}
+
+// Calculate specific dimentions of a property
+@mixin calc-prop-scale($property, $value, $scale) {
+	#{$property}: $value * ($scale/100);
+}
+
+// Calculate proportional values of an element
+@mixin calc-dimentions($width, $height, $scale) {
+	@include calc-prop-scale(width, $width, $scale);
+	@include calc-prop-scale(height, $height, $scale);
+}
+
+
+// Create a mediaquery depends of the param passed
+@mixin respond-to($media) {
+	@if $media == 'min' {
+		@media only screen and (min-width: $min-width)  { @content; }
+	}
+	@else if $media == 'xsmall' {
+		@media only screen and (min-width: $xsmall-width)  { @content; }
+	}
+	@else if $media == 'small' {
+		@media only screen and (min-width: $small-width)  { @content; }
+	}
+	@else if $media == 'medium' {
+		@media only screen and (min-width: $medium-width)  { @content; }
+	}
+	@else if $media == 'large' {
+		@media only screen and (min-width: $large-width)  { @content; }
+	}
+	@else if $media == 'xlarge' {
+		@media only screen and (min-width: $xlarge-width)  { @content; }
+	}
+	@else if $media == 'xxlarge' {
+		@media only screen and (min-width: $xxlarge-width)  { @content; }
+	}
+	@else {
+		@media only screen and (min-width: $media)  { @content; }
+	}
+}
+
+// Create a mediaquery using input number as max-width
+@mixin respond-to-max($maxW) {
+	@media only screen and (max-width: $maxW)  { @content; }
+}
+
+// Create a mediaquery using input numbers as min-width and max-width
+@mixin respond-to-minmax($minW, $maxW) {
+	@media only screen and (min-width: $minW) and (max-width: $maxW)  { @content; }
+}
+

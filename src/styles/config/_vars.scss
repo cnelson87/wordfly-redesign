@@ -1,0 +1,39 @@
+
+// CONFIG VARS
+//-------------------------------------------------------
+
+// Namespace
+$namespace: "wordfly";
+
+// Fonts
+$font-primary: Arial, Helvetica, Verdana, sans-serif;
+$font-titles: "Clarendon", Georgia, Times, serif;
+$font-headers: "Din", Arial, Helvetica, Verdana, sans-serif;
+$font-alt: "Din", Arial, Helvetica, Verdana, sans-serif;
+
+// Colors
+$text-primary: #7d7d7d;
+$text-secondary: #fff;
+$text-titles: #fff;
+$text-headers: #464646;
+$text-headers-alt: #40739a;
+$text-dark-gray: #333;
+$text-med-gray: #999;
+$text-light-gray: #ccc;
+$link-color: #40739a;
+$link-hover-color: #42729a;
+$link-color-alt: #fff;
+$border-color: #42729a;
+$error-color: #900;
+
+// Vars
+$image-path: "../images";
+$font-path: "../fonts";
+
+// Breakpoints
+$xsmall-width: 320px;
+$small-width: 481px;
+$medium-width: 641px;
+$large-width: 721px;
+$xlarge-width: 961px;
+$xxlarge-width: 1025px;
