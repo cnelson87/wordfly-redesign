@@ -7,7 +7,7 @@
 	width: 22px;
 	height: 19px;
 	@include hide-text;
-	background: transparent url('#{$image-path}/sprites.png') no-repeat -140px 0;
+	background: transparent url('#{$image-path}/global/sprites.png') no-repeat -140px 0;
 }
 
 .icon-menu {
@@ -15,7 +15,7 @@
 	width: 24px;
 	height: 20px;
 	@include hide-text;
-	background: transparent url('#{$image-path}/sprites.png') no-repeat -170px 0;
+	background: transparent url('#{$image-path}/global/sprites.png') no-repeat -170px 0;
 }
 
 .icon-closeX {
@@ -23,7 +23,7 @@
 	width: 20px;
 	height: 20px;
 	@include hide-text;
-	background: transparent url('#{$image-path}/sprites.png') no-repeat -200px 0;
+	background: transparent url('#{$image-path}/global/sprites.png') no-repeat -200px 0;
 }
 
 .social-btn, .social-btn-alt {
@@ -33,7 +33,7 @@
 	border: 2px solid #fff;
 	border-radius: 50%;
 	@include hide-text;
-	background: transparent url('#{$image-path}/sprites.png') no-repeat border-box 0 0;
+	background: transparent url('#{$image-path}/global/sprites.png') no-repeat border-box 0 0;
 	@include prefix(box-sizing, border-box);
 }
 
@@ -85,7 +85,7 @@
 	width: 22px;
 	height: 22px;
 	@include hide-text;
-	background: transparent url('#{$image-path}/sprites.png') no-repeat 0 0;
+	background: transparent url('#{$image-path}/global/sprites.png') no-repeat 0 0;
 	opacity: 0.8;
 
 	&.icon-twitter {

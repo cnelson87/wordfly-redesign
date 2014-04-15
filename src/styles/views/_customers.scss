@@ -1,0 +1,32 @@
+/*
+/* CUSTOMERS
+/*-----------------------------------------------------*/
+
+#customers-page {}
+
+.client-logos {
+	position: relative;
+	@include clearfix;
+
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	
+		> li {
+			float: left;
+			width: 200px;
+			height: 100px;
+			margin: 0 0 40px 0;
+			padding: 20px;
+			text-align: center;
+			@include prefix(box-sizing, border-box);
+		}
+
+	}
+
+}
+
+
+@import "customers-mq";
+

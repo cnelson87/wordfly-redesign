@@ -26,10 +26,7 @@
 		.content-inner {
 			width: 480px;
 		}
-		&.banner {
-			background-size: 100% 100%;
-		}
-		&.cta {
+		&.callout {
 			.content-inner {
 				h2 {
 					font-size: 40px;
@@ -47,7 +44,7 @@
 		z-index: 2;
 	}
 	// #content .content-section {
-	// 	&.cta {
+	// 	&.callout {
 	// 		.content-inner {
 	// 			h2 {
 	// 				font-size: 48px;
@@ -76,7 +73,7 @@
 		.content-inner {
 			width: 720px;
 		}
-		&.cta {
+		&.callout {
 			.content-inner {
 				h2 {
 					font-size: 56px;
@@ -94,7 +91,7 @@
 		z-index: 3;
 	}
 	// #content .content-section {
-	// 	&.cta {
+	// 	&.callout {
 	// 		.content-inner {
 	// 			h2 {
 	// 				font-size: 64px;
@@ -147,38 +144,47 @@
 		}
 
 		// &.bg-tl {
-		// 	background: transparent url('#{$image-path}/bg-content-tl.png') no-repeat left top;
+		// 	background: #fff url('#{$image-path}/global/bg-content-tl.png') no-repeat left top;
 		// 	.content-inner {
 		// 		min-height: 300px;
 		// 	}
 		// }
 
 		&.bg-tr {
-			background: transparent url('#{$image-path}/bg-content-tr.png') no-repeat right top;
+			background: #fff url('#{$image-path}/global/bg-content-tr.png') no-repeat right top;
 			.content-inner {
 				min-height: 300px;
 			}
 		}
 
 		&.bg-bl {
-			background: transparent url('#{$image-path}/bg-content-bl.png') no-repeat left bottom;
+			background: #fff url('#{$image-path}/global/bg-content-bl.png') no-repeat left bottom;
 			.content-inner {
 				min-height: 260px;
 			}
 		}
 
 		&.bg-br {
-			background: transparent url('#{$image-path}/bg-content-br.png') no-repeat right bottom;
+			background: #fff url('#{$image-path}/global/bg-content-br.png') no-repeat right bottom;
 			.content-inner {
 				min-height: 260px;
 			}
 		}
 
-		&.banner {
-			background-image: url('#{$image-path}/bg-banner-desk.jpg');
+		&.banner, &.banner-tall {
+			background-image: url('#{$image-path}/global/bg-banner-desk-tl.png');
+			.content-inner {
+				height: 364px;
+				padding-top: 160px;
+				h1 {
+					width: 800px;
+				}
+			}
+		}
+
+		&.banner-tall {
 			.content-inner {
 				height: 550px;
-				padding-top: 160px;
 			}
 		}
 
@@ -189,8 +195,8 @@
 			}
 		}
 
-		&.cta {
-			background: #3e749a url('#{$image-path}/bg-cta.png') no-repeat left top;
+		&.callout {
+			background-image: url('#{$image-path}/global/bg-callout-desk-tl.png');
 			.content-inner {
 				padding: 100px;
 
