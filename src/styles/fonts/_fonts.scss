@@ -1,47 +1,47 @@
-﻿/*------------------------------------------------------------------------------
- * Embedded font definitions
- *----------------------------------------------------------------------------*/
+﻿/*
+/* CUSTOM FONTS
+/*-----------------------------------------------------*/
 
 @font-face {
 	font-family: 'Clarendon';
-	src: url('../fonts/clarendonltstd-webfont.eot');
-	src: url('../fonts/clarendonltstd-webfont.eot?#iefix') format('embedded-opentype'),
-		 url('../fonts/clarendonltstd-webfont.woff') format('woff'),
-		 url('../fonts/clarendonltstd-webfont.ttf') format('truetype'),
-		 url('../fonts/clarendonltstd-webfont.svg#Clarendon') format('svg');
+	src: url('../fonts/clarendonltstd-light-webfont.eot');
+	src: url('../fonts/clarendonltstd-light-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/clarendonltstd-light-webfont.woff') format('woff'),
+		 url('../fonts/clarendonltstd-light-webfont.ttf') format('truetype'),
+		 url('../fonts/clarendonltstd-light-webfont.svg#Clarendon') format('svg');
 }
 
-/* nav fonts */
 @font-face {
-  font-family: 'Din';
-  src: url("../fonts/DINWeb.eot");
-  src: url("../fonts/DINWeb.eot?#iefix") format('embedded-opentype'), url("../fonts/DINWeb.woff") format('woff'), url("../fonts/DINComp.ttf") format('truetype');
-  font-weight: normal;
-  font-style: normal;
+	font-family: 'Din';
+	src: url("../fonts/DIN-light.eot");
+	src: url("../fonts/DIN-light.eot?#iefix") format('embedded-opentype'),
+		 url("../fonts/DIN-light.woff") format('woff'),
+		 url("../fonts/DIN-light.ttf") format('truetype');
+	font-weight: normal;
+	font-style: normal;
 }
 @font-face {
-  font-family: 'Din';
-  src: url("../fonts/DINWeb-Bold.eot");
-  src: url("../fonts/DINWeb-Bold.eot?#iefix") format('embedded-opentype'), url("../fonts/DINWeb-Bold.woff") format('woff'), url("../fonts/DINComp-Bold.ttf") format('truetype');
-  font-weight: bold;
+	font-family: 'Din';
+	src: url("../fonts/DIN-Medium.eot");
+	src: url("../fonts/DIN-Medium.eot?#iefix") format('embedded-opentype'),
+		 url("../fonts/DIN-Medium.woff") format('woff'),
+		 url("../fonts/DIN-Medium.ttf") format('truetype');
+	font-weight: bold;
 }
 @font-face {
-  font-family: 'Din';
-  src: url("../fonts/DINWeb-Ita.eot");
-  src: url("../fonts/DINWeb-Ita.eot?#iefix") format('embedded-opentype'), url("../fonts/DINWeb-Ita.woff") format('woff'), url("../fonts/DINComp-Ita.ttf") format('truetype');
-  font-style: italic;
+	font-family: 'Din';
+	src: url("../fonts/DIN-LightItalic.eot");
+	src: url("../fonts/DIN-LightItalic.eot?#iefix") format('embedded-opentype'),
+		 url("../fonts/DIN-LightItalic.woff") format('woff'),
+		 url("../fonts/DIN-LightItalic.ttf") format('truetype');
+	font-style: italic;
 }
 @font-face {
-  font-family: 'Din';
-  src: url("../fonts/DINWeb-BoldIta.eot");
-  src: url("../fonts/DINWeb-BoldIta.eot?#iefix") format('embedded-opentype'), url("../fonts/DINWeb-BoldIta.woff") format('woff'), url("../fonts/DINComp-BoldIta.ttf") format('truetype');
-  font-weight: bold;
-  font-style: italic;
+	font-family: 'Din';
+	src: url("../fonts/DIN-MediumItalic.eot");
+	src: url("../fonts/DIN-MediumItalic.eot?#iefix") format('embedded-opentype'),
+		 url("../fonts/DIN-MediumItalic.woff") format('woff'),
+		 url("../fonts/DIN-MediumItalic.ttf") format('truetype');
+	font-weight: bold;
+	font-style: italic;
 }
-@font-face {
-  font-family: 'Din';
-  src: url("../fonts/DINWeb-Medium.eot");
-  src: url("../fonts/DINWeb-Medium.eot?#iefix") format('embedded-opentype'), url("../fonts/DINWeb-Medium.woff") format('woff'), url("../fonts/DINComp-Medium.ttf") format('truetype');
-  font-weight: 500;
-}
-
