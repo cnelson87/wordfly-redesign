@@ -1,0 +1,71 @@
+/*
+/* CUSTOMERS
+/*-----------------------------------------------------*/
+
+
+@include respond-to(small) {
+
+	.client-logos {
+
+		ul {
+			margin: 0 20px;
+
+			> li {
+				width: 180px;
+				height: 100px;
+				margin: 0 10px 40px 10px;
+			}
+
+		}
+
+	}
+
+}
+
+
+// @include respond-to(medium) {
+
+
+// }
+
+
+@include respond-to(large) {
+
+	.client-logos {
+
+		ul {
+			margin: 0;
+
+			> li {
+				margin: 0 20px 40px 20px;
+			}
+
+		}
+
+	}
+
+}
+
+
+// @include respond-to(xlarge) {
+
+
+// }
+
+
+@include respond-to(xxlarge) {
+
+	.client-logos {
+
+		ul {
+
+			> li {
+				margin: 0 10px 40px 10px;
+			}
+
+		}
+
+	}
+
+}
+
