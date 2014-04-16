@@ -146,6 +146,16 @@ html, body {
 			position: relative;
 			@include clearfix;
 			@include prefix(box-sizing, border-box);
+
+			&.bordered {
+				border-bottom: 2px solid #3e749a;
+			}
+
+		}
+
+		.col-half-left,
+		.col-half-right {
+			@include prefix(box-sizing, border-box);
 		}
 
 		&.banner, &.banner-tall {

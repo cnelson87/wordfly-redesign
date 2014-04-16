@@ -5,22 +5,115 @@
 #customers-page {}
 
 .client-logos {
+	width: 100%;
 	position: relative;
-	@include clearfix;
 
 	ul {
 		list-style: none;
 		margin: 0;
 		padding: 0;
-	
+		@include clearfix;
+
 		> li {
 			float: left;
-			width: 200px;
-			height: 100px;
-			margin: 0 0 40px 0;
-			padding: 20px;
+			width: 140px;
+			height: 78px;
+			background: transparent url('#{$image-path}/customers/client-logos.png') no-repeat 0 0 / 500% auto;
+			margin: 0 0 22px 0;
+			position: relative;
 			text-align: center;
-			@include prefix(box-sizing, border-box);
+			@include hide-text;
+		}
+
+		.logo-Cincinnati-Opera {
+			background-position:   0%   0%;
+		}
+		.logo-Perth-Arts-Festival {
+			background-position:  25%   0%;
+		}
+		.logo-Playhouse {
+			background-position:  50%   0%;
+		}
+		.logo-Center-Performing-Arts {
+			background-position:  75%   0%;
+		}
+		.logo-San-Francisco-Opera {
+			background-position: 100%   0%;
+		}
+		.logo-Birmingham-Hippodrome {
+			background-position:   0%  20%;
+		}
+		.logo-Canolfan-Mileniwm {
+			background-position:  25%  20%;
+		}
+		.logo-Sydney-Opera-House {
+			background-position:  50%  20%;
+		}
+		.logo-Royal-Shakespeare-Company {
+			background-position:  75%  20%;
+		}
+		.logo-Bridgewater-Hall {
+			background-position: 100%  20%;
+		}
+		.logo-Auckland-Museum {
+			background-position:   0%  40%;
+		}
+		.logo-Boston-Ballet {
+			background-position:  25%  40%;
+		}
+		.logo-San-Francisco-Symphony {
+			background-position:  50%  40%;
+		}
+		.logo-Smithsonian-Associates {
+			background-position:  75%  40%;
+		}
+		.logo-Royal-Albert-Hall {
+			background-position: 100%  40%;
+		}
+		.logo-Sydney-Theatre-Co {
+			background-position:   0%  60%;
+		}
+		.logo-YBCA {
+			background-position:  25%  60%;
+		}
+		.logo-Woolly-Mammoth-Theatre {
+			background-position:  50%  60%;
+		}
+		.logo-Phoenix-Theatre {
+			background-position:  75%  60%;
+		}
+		.logo-Kimmel-Center {
+			background-position: 100%  60%;
+		}
+		.logo-Washington-Federal {
+			background-position:   0%  80%;
+		}
+		.logo-New-World-Symphony {
+			background-position:  25%  80%;
+		}
+		.logo-Royal-Opera-House {
+			background-position:  50%  80%;
+		}
+		.logo-Science-Museum {
+			background-position:  75%  80%;
+		}
+		.logo-Berkeley-Rep {
+			background-position: 100%  80%;
+		}
+		.logo-National-Ballet-Canada {
+			background-position:   0% 100%;
+		}
+		.logo-Scottish-Ballet {
+			background-position:  25% 100%;
+		}
+		.logo-Seattle-Opera {
+			background-position:  50% 100%;
+		}
+		.logo-Steppenwolf {
+			background-position:  75% 100%;
+		}
+		.logo-BAM {
+			background-position: 100% 100%;
 		}
 
 	}

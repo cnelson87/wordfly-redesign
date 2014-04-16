@@ -9,7 +9,7 @@
 fieldset {
 	display: block;
 	width: auto;
-	margin-bottom: 1.5em;
+	margin: 0 0 18px 0;
 }
 
 legend {
@@ -19,14 +19,15 @@ legend {
 label, span.label {
 	display: inline-block;
 	color: $text-dark-gray;
-	font-size: 14px;
+	font-family: $font-alt;
+	font-size: 18px;
 	font-weight: bold;
-	line-height: 18px;
-	padding-top: 2px; /* matches input padding-top for vertical alignment */
-	span.sm {
-		font-size: 12px;
-		font-weight: normal;
-	}
+	line-height: 1.0;
+	// padding-top: 2px; /* matches input padding-top for vertical alignment */
+	// span.sm {
+	// 	font-size: 12px;
+	// 	font-weight: normal;
+	// }
 }
 label.disabled {
 	color: $text-light-gray;
@@ -45,6 +46,7 @@ input, select, textarea, button {
 	color: $text-dark-gray;
 	font-family: Arial, sans-serif;
 	font-size: 14px;
+	line-height: 18px;
 	vertical-align: top;
 	margin: 0;
 	padding: 0;
@@ -77,70 +79,86 @@ textarea:invalid {
 
 /* start text inputs, selects, textareas */
 
-input:not([type=range]):not([type=checkbox]):not([type=radio]):not([type=submit]),
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=number],
+input[type=tel],
+input[type=url],
 select,
 textarea {
 	width: 140px;
-	height: 28px;
-	border: 1px solid #254052;
-	padding: 3px 6px;
+	height: 36px;
+	border: 1px solid #e1e1e1;
+	padding: 8px;
 }
 
 select {
 	width: auto;
 	min-width: 80px;
 	max-width: 100%;
+	// background: #fcfcfc; /* Old browsers */
+	// background: -webkit-linear-gradient(top,  #fcfcfc 0%,#eeeeee 100%); /* Chrome10+,Safari5.1+ */
+	// background: -moz-linear-gradient(top,  #fcfcfc 0%, #eeeeee 100%); /* FF3.6+ */
+	// background: -ms-linear-gradient(top,  #fcfcfc 0%,#eeeeee 100%); /* IE10+ */
+	// background: -o-linear-gradient(top,  #fcfcfc 0%,#eeeeee 100%); /* Opera 11.10+ */
+	// background: linear-gradient(to bottom,  #fcfcfc 0%,#eeeeee 100%); /* W3C */
+	// @include prefix(appearance, none);
 }
 
 textarea {
-	height: 38px;
+	height: 54px;
 	line-height: 18px;
 }
 
-input:not([type=range]):not([type=checkbox]):not([type=radio]):not([type=submit]):focus,
+input[type=text]:focus,
+input[type=password]:focus,
+input[type=email]:focus,
+input[type=number]:focus,
+input[type=tel]:focus,
+input[type=url]:focus,
 select:focus,
 textarea:focus {
-	border-color: #333;
+	border-color: #464646;
 	outline: none;
 }
 
-input:not([type=range]):not([type=checkbox]):not([type=radio]):not([type=submit])[disabled],
-input:not([type=range]):not([type=checkbox]):not([type=radio]):not([type=submit]).disabled,
+input[disabled], input.disabled,
 select[disabled], select.disabled,
 textarea[disabled], textarea.disabled {
 	color: #ccc;
 	border-color: #dedede;
 }
 
-input:not([type=checkbox]):not([type=radio]):not([type=range]):not([type=submit]).invalid,
+input.invalid,
 select.invalid,
 textarea.invalid {
 	border-color: #c00;
 }
 
-input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-med,
+input.input-med,
 select.input-med {
 	/* default */
 	width: 140px;
 }
-input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-xshort,
+input.input-xshort,
 select.input-xshort {
 	width: 40px;
 	min-width: 40px;
 }
-input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-short,
+input.input-short,
 select.input-short {
 	width: 80px;
 }
-input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-long,
+input.input-long,
 select.input-long {
 	width: 240px;
 }
-input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-xlong,
+input.input-xlong,
 select.input-xlong {
 	width: 360px;
 }
-input:not([type=checkbox]):not([type=radio]):not([type=submit]).input-auto,
+input.input-auto,
 select.input-auto {
 	width: auto;
 	min-width: auto;
@@ -148,11 +166,11 @@ select.input-auto {
 
 textarea.textarea-med {
 	width: 280px;
-	height: 70px; /* 16px * 4 line-height + 6px padding & border */
+	height: 90px; /* 18px * 4 line-height + 8px padding & border */
 }
 textarea.textarea-lrg {
-	width: 500px;
-	height: 102px; /* 16px * 6 line-height + 6px padding & border */
+	width: 480px;
+	height: 126px; /* 18px * 6 line-height + 8px padding & border */
 }
 
 /* end text inputs, selects, textareas */
@@ -206,64 +224,71 @@ input[type=reset],
 input[type=button],
 button {
 	cursor: pointer;
-	min-width: 88px;
-	font-size: 12px;
-	font-weight: bold;
+	min-width: 112px;
+	height: 40px;
+	display: inline-block;
+	color: $link-color;
+	font-family: $font-alt;
+	font-size: 18px;
+	line-height: 36px;
 	text-align: center;
-	text-decoration: none;
-	text-transform: uppercase;
 	vertical-align: middle;
-	background: #ccc;
-	border: 1px solid #333;
-	border-radius: 3px;
-	padding: 4px 12px;
+	background-color: #fff;
+	border: 2px solid $link-color;
+	border-radius: 4px;
+	padding: 2px 16px 0 16px;
 	/* old IE width fix, no affect on other browsers */
 	overflow: visible;
 	@include prefix(transition, 'color .2s, background-color .2s');
 
 	&:focus, &:hover {
-		background: #dedede;
+		color: $link-hover-color;
 		outline: none;
 	}
 
 }
 
-input.btn, input.sm-btn,
-button.btn, button.sm-btn {
-	color: #fff;
-	background: #900;
-}
-input.alt-btn, input.sm-alt-btn,
-button.alt-btn, button.sm-alt-btn {
-	color: #900;
-	background: #fff;
-	border-color: #900;
-}
-input.sm-btn, input.sm-alt-btn,
-button.sm-btn, button.sm-alt-btn {
-	min-width: auto;
-	font-size: 11px;
-	font-weight: normal;
-	padding: 1px 8px;
-}
-input.btn:focus, input.btn:hover,
-input.sm-btn:focus, input.sm-btn:hover,
-button.btn:focus, button.btn:hover,
-button.sm-btn:focus, button.sm-btn:hover {
-	background: #c00;
-}
-input.alt-btn:focus, input.alt-btn:hover,
-input.sm-alt-btn:focus, input.sm-alt-btn:hover
-button.alt-btn:focus, button.alt-btn:hover,
-button.sm-alt-btn:focus, button.sm-alt-btn:hover {
-	color: #333;
-	background: #fff;
-	border-color: #333;
-}
+// input.btn, input.sm-btn,
+// button.btn, button.sm-btn {
+// 	color: #fff;
+// 	background: #900;
+// }
+// input.alt-btn, input.sm-alt-btn,
+// button.alt-btn, button.sm-alt-btn {
+// 	color: #900;
+// 	background: #fff;
+// 	border-color: #900;
+// }
+// input.sm-btn, input.sm-alt-btn,
+// button.sm-btn, button.sm-alt-btn {
+// 	min-width: auto;
+// 	font-size: 11px;
+// 	font-weight: normal;
+// 	padding: 1px 8px;
+// }
+// input.btn:focus, input.btn:hover,
+// input.sm-btn:focus, input.sm-btn:hover,
+// button.btn:focus, button.btn:hover,
+// button.sm-btn:focus, button.sm-btn:hover {
+// 	background: #c00;
+// }
+// input.alt-btn:focus, input.alt-btn:hover,
+// input.sm-alt-btn:focus, input.sm-alt-btn:hover
+// button.alt-btn:focus, button.alt-btn:hover,
+// button.sm-alt-btn:focus, button.sm-alt-btn:hover {
+// 	color: #333;
+// 	background: #fff;
+// 	border-color: #333;
+// }
 
 /* end buttons */
 
 /* start misc */
+
+
+.req-note {
+	text-align: right;
+}
 
 .form-note { /* note next to an input field */
 	display: inline-block;
@@ -309,7 +334,7 @@ ol.column-fields, ul.column-fields {
 	.inline-fields > li,
 	.column-fields > li {
 		min-height: 24px; /* matches input height */
-		margin: 0 0 8px 0;
+		margin: 0 0 18px 0;
 	}
 
 	/* side-by-side label / input */
@@ -359,7 +384,7 @@ ol.column-fields, ul.column-fields {
 	.vertical-fields > li > label,
 	.vertical-fields > li > span.label {
 		display: block;
-		margin: 0 0 2px 0;
+		margin: 0 0 4px 0;
 	}
 
 	.inline-fields > li {

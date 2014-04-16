@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+@@include('head.html', {})
+</head>
+<body id="contact-page">
+
+@@include('menu.html', {})
+
+<div id="wrapper">
+
+@@include('header.html', {})
+
+	<div id="content">
+
+
+		<section class="content-section banner">
+			<div class="content-inner">
+
+				<h1>How can we help you?</h1>
+
+			</div>
+		</section>
+
+		<section class="content-section bg-tr-lrg">
+			<div class="content-inner bordered">
+
+				<p class="intro-copy">Are you interested in giving WordFly a try? Or a question about one of our features? We'd love to hear from you.</p>
+
+				<div class="col-half-left">
+
+					<h2>Contact Us</h2>
+
+					<form id="emailForm" name="emailForm" onsubmit="return contactValidation();" method="POST"
+						action="http://www.wordfly.com/wp-content/themes/wordfly/contact-form.php">
+
+						<fieldset>
+							<ol class="vertical-fields">
+								<li>
+									<label for="fSubject">What’s this about? *</label>
+									<select id="fSubject" name="fSubject" required>
+										<option value="Migrate to WordFly">Migrate to WordFly</option>
+										<option value="High Volume Pricing">High Volume Pricing</option>
+										<option value="Technical Support &amp; Help">Technical Support &amp; Help</option>
+										<option value="Report Spam or Abuse">Report Spam or Abuse</option>
+										<option value="Billing Assistance">Billing Assistance</option>
+										<option value="Media Inquiries">Media Inquiries</option>
+									</select>
+								</li>
+								<li>
+									<label for="fName">Your Name *</label>
+									<input type="text" id="fName" name="fName" class="input-long" required />
+								</li>
+								<li>
+									<label for="fEmailAddress">Email Address *</label>
+									<input type="email" id="fEmailAddress" name="fEmailAddress" required />
+								</li>
+								<!-- <li>
+									<label for="fOrganization">Organization *</label>
+									<input type="text" id="fOrganization" name="fOrganization" required />
+								</li> -->
+								<li>
+									<label for="fMessage">What’s on your mind? *</label>
+									<textarea id="fMessage" name="fMessage" required></textarea>
+								</li>
+							</ol>
+						</fieldset>
+
+						<p class="req-note">* - Required Field</p>
+
+						<input type="submit" id="submit" name="submit" value="Email Us" />
+
+					</form>
+
+				</div>
+
+				<div class="col-half-right">
+
+					<h2>Find Us</h2>
+
+					<img class="map" src="/_assets/images/contact/map.png" alt="map" />
+
+					<p class="address">1326 5th Ave, Suite 800<br />Seattle, WA 98101</p>
+
+					<p class="phones">PH + 1 206.728.7997<br />FX + 1 206.728.1144</p>
+
+
+				</div>
+
+			</div>
+		</section>
+
+
+	</div>
+
+@@include('footer.html', {})
+
+</div>
+
+</body>
+</html>
