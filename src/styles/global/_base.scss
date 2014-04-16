@@ -72,8 +72,9 @@ p, ul, ol, dl, table, address {
 	}
 
 p.intro-copy {
-	font-size: 1.3em;
+	width: 100%;
 	text-align: center;
+	margin: 0 auto 1.5em auto;
 }
 
 table {
@@ -98,16 +99,16 @@ h1 {
 	line-height: 36px;
 	margin: 0;
 }
-h2, .h2 {
+h2 {
 	color: $text-headers;
 	font-family: $font-headers;
-	font-size: 22px;
+	font-size: 24px;
 	font-weight: normal;
 	letter-spacing: -1px;
-	line-height: 22px;
+	line-height: 24px;
 	margin: 0 0 12px 0;
 }
-h3, .h3 {
+h3 {
 	color: $text-headers;
 	font-family: $font-headers;
 	font-size: 1.0em;
@@ -115,24 +116,45 @@ h3, .h3 {
 	line-height: 1.0em;
 	margin: 0 0 0.2em 0;
 }
-h4, .h4 {
+h4 {
 	font-size: 1.0em;
 	font-weight: bold;
 	line-height: 1.0em;
 	margin: 0 0 6px 0;
 }
-h5, .h5 {
+h5 {
 	font-size: 12px;
 	font-weight: bold;
 	line-height: 12px;
 	margin: 0 0 4px 0;
 }
-h6, .h6 {
+h6 {
 	font-size: 12px;
 	font-weight: normal;
 	line-height: 12px;
 	margin: 0 0 2px 0;
 }
+
+h2.intro-title {
+	color: $text-headers-alt;
+	text-align: center;
+}
+
+h2.bordered {
+	margin: 0 0 24px 0;
+	padding: 0 0 12px 0;
+	position: relative;
+}
+	h2.bordered:after {
+		content: "";
+		display: block;
+		width: 26px;
+		height: 2px;
+		background: $border-color;
+		position: absolute;
+		left: 0;
+		bottom: 0;
+	}
 
 b, strong {font-weight: bold;}
 
@@ -153,6 +175,8 @@ q:before, q:after {
 	content: '';
 	content: none;
 }
+
+//TODO - blockquote needs styling
 blockquote {
 	/* note: must not leave any whitespace at the beginning of a blockquote in markup - Safari will render it */
 	color: $text-dark-gray;
@@ -164,4 +188,6 @@ blockquote {
 	padding: 0 20px;
 }
 
+
 @import "base-mq";
+
