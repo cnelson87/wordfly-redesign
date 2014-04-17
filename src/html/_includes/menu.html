@@ -29,10 +29,20 @@
 		<li><a class="social-btn btn-android" href=" https://play.google.com/store/apps/details?id=com.wordfly.android" target="_blank">WordFly Android App</a></li>
 	</ul>
 
-	<form id="SubscribeForm" method="POST" action="#">
+	<form id="newsletterForm" name="newsletterForm" method="POST"
+		action="https://tracking.wordfly.com/subscribe/">
 		<fieldset>
-			<label for="EmailAddress">Subscribe to Our Newsletter</label>
-			<input type="email" id="EmailAddress" name="EmailAddress" placeholder="Email Address" required />
+			<input type="hidden" id="fNewsletterRequest" name="fNewsletterRequest" value="true" />
+			<!-- WordFly Organization Guid for "Wordfly" -->
+			<input type="hidden" id="wf_o" name="wf_o" value="B4A4EF01-CADF-DC11-9CF3-005056BA0A05" />
+			<!-- WordFly List Guid for "WordFly.com Sign-ups" -->
+			<input type="hidden" id="wf_l" name="wf_l" value="2D198CD7-B993-E111-AA52-E41F1345A46A" />
+
+			<label for="wf_e">Subscribe to Our Newsletter</label>
+			<input type="email" id="wf_e" name="wf_e" placeholder="Email Address" required />
+
+			<input type="submit" id="wf_s" name="wf_s" value="Join" />
+
 		</fieldset>
 	</form>
 

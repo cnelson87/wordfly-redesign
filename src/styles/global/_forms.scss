@@ -305,11 +305,11 @@ button {
 	margin-top: 5px;
 }
 
-input + input, input + select, input + textarea, input + output,
-select + input, select + select, select + textarea, select + output,
-textarea + input, textarea + select, textarea + textarea, textarea + output {
-	margin-left: 5px;
-}
+// input + input, input + select, input + textarea, input + output,
+// select + input, select + select, select + textarea, select + output,
+// textarea + input, textarea + select, textarea + textarea, textarea + output {
+// 	margin-left: 5px;
+// }
 
 /* end misc */
 
@@ -468,9 +468,8 @@ ol.cb-rb-fields, ul.cb-rb-fields {
 /* fieldset/div wrapper for form buttons */
 .form-btns {
 	clear: both;
-	border-top: 1px solid $border-color;
-	margin-bottom: 1.5em;
-	padding-top: 1.0em;
+	@include clearfix;
+	margin: 0 0 18px 0;
 }
 
 /*** /fieldset styles ***/

@@ -4,19 +4,23 @@
 
 #contact-page {}
 
-.map {
+a.map {
 	display: block;
-	width: 100%;
-	height: auto;
-	margin-bottom: 18px;
+	margin-bottom: 1.0em;
+
+	img {
+		display: block;
+		width: 100%;
+		height: auto;
+	}
+
 }
 
 .address, .phones {
-	display: inline-block;
-	width: 45%;
+	margin-bottom: 1.0em;
 }
 
-#emailForm {
+#contactForm {
 
 	input[type=text],
 	input[type=email],

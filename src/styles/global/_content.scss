@@ -1,0 +1,95 @@
+/*
+/* CONTENT
+/*-----------------------------------------------------*/
+
+
+#content {
+	width: 100%;
+	position: relative;
+	z-index: 1;
+
+	.content-section {
+		width: 100%;
+		background: #fff;
+
+		.content-inner {
+			width: 320px;
+			margin: 0 auto;
+			padding: 32px 20px;
+			position: relative;
+			@include clearfix;
+			@include prefix(box-sizing, border-box);
+
+			&.bordered {
+				border-bottom: 2px solid #3e749a;
+			}
+
+		}
+
+		.col-half-left,
+		.col-half-right {
+			max-width: 500px;
+			margin-top: 40px;
+			@include prefix(box-sizing, border-box);
+		}
+
+		&.banner, &.banner-tall {
+			background: #3e749a url('#{$image-path}/global/bg-banner-mobi-tl.png') no-repeat 0 0;
+			@include prefix(box-shadow, '0 0 80px rgba(0,0,0,0.4) inset');
+			.content-inner {
+				height: 222px;
+				padding-top: 80px;
+				text-align: center;
+
+				h1 {
+					color: $text-titles;
+					margin: 0 auto;
+				}
+
+			}
+
+		}
+
+		&.banner-tall {
+			.content-inner {
+				height: 320px;
+			}
+		}
+
+
+		&.alt {
+			background-color: #f7f5f1;
+		}
+
+		&.callout {
+			background: #3e749a url('#{$image-path}/global/bg-callout-mobi-tl.png') no-repeat 0 0;
+			@include prefix(box-shadow, '0 0 80px rgba(0,0,0,0.4) inset');
+			// background: #32638a; /* Old browsers */
+			// background: -webkit-linear-gradient(left,  #32638a 0%,#3e749a 30%,#3e749a 70%,#32638a 100%); /* Chrome10+,Safari5.1+ */
+			// background: -moz-linear-gradient(left,  #32638a 0%, #3e749a 30%, #3e749a 70%, #32638a 100%); /* FF3.6+ */
+			// background: -ms-linear-gradient(left,  #32638a 0%,#3e749a 30%,#3e749a 70%,#32638a 100%); /* IE10+ */
+			// background: -o-linear-gradient(left,  #32638a 0%,#3e749a 30%,#3e749a 70%,#32638a 100%); /* Opera 11.10+ */
+			// background: linear-gradient(to right,  #32638a 0%,#3e749a 30%,#3e749a 70%,#32638a 100%); /* W3C */
+			.content-inner {
+				text-align: center;
+
+				h2 {
+					color: $text-secondary;
+					font-size: 28px;
+				}
+
+				p {
+					color: $text-secondary;
+				}
+
+			}
+
+		}
+
+	}
+
+}
+
+
+@import "content-mq";
+

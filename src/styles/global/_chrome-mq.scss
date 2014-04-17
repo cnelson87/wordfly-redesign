@@ -22,19 +22,6 @@
 	#footer .footer-inner {
 		width: 480px;
 	}
-	#content .content-section {
-		.content-inner {
-			width: 480px;
-		}
-		&.callout {
-			.content-inner {
-				h2 {
-					font-size: 40px;
-					line-height: 40px;
-				}
-			}
-		}
-	}
 
 }
 
@@ -43,16 +30,6 @@
 	#breakpoint-indicator {
 		z-index: 2;
 	}
-	// #content .content-section {
-	// 	&.callout {
-	// 		.content-inner {
-	// 			h2 {
-	// 				font-size: 48px;
-	// 				line-height: 48px;
-	// 			}
-	// 		}
-	// 	}
-	// }
 }
 
 
@@ -69,19 +46,6 @@
 	#footer .footer-inner {
 		width: 720px;
 	}
-	#content .content-section {
-		.content-inner {
-			width: 720px;
-		}
-		&.callout {
-			.content-inner {
-				h2 {
-					font-size: 64px;
-					line-height: 64px;
-				}
-			}
-		}
-	}
 
 }
 
@@ -90,17 +54,6 @@
 	#breakpoint-indicator {
 		z-index: 3;
 	}
-	// #content .content-section {
-	// 	&.callout {
-	// 		.content-inner {
-	// 			h2 {
-	// 				font-size: 64px;
-	// 				line-height: 64px;
-	//				letter-spacing: -2px;
-	// 			}
-	// 		}
-	// 	}
-	// }
 }
 
 
@@ -109,6 +62,7 @@
 	#wrapper {
 		min-width: 1000px;
 	}
+
 	#header .header-inner {
 		width: 1000px;
 		height: 120px;
@@ -125,6 +79,7 @@
 		}
 
 	}
+
 	#footer .footer-inner {
 		width: 1000px;
 		height: 120px;
@@ -133,91 +88,6 @@
 
 		.share-nav {
 			float: left;
-		}
-
-	}
-	#content .content-section {
-
-		.content-inner {
-			width: 1000px;
-			padding: 72px 0 36px 0;
-		}
-
-		.col-half-left {
-			float: left;
-			width: 50%;
-			padding-right: 20px;
-		}
-
-		.col-half-right {
-			float: right;
-			width: 50%;
-			padding-left: 20px;
-		}
-
-		// &.bg-tl {
-		// 	background: #fff url('#{$image-path}/global/bg-content-tl.png') no-repeat left top;
-		// 	.content-inner {
-		// 		min-height: 300px;
-		// 	}
-		// }
-
-		&.bg-tr {
-			background: #fff url('#{$image-path}/global/bg-content-tr.png') no-repeat right top;
-			.content-inner {
-				min-height: 300px;
-			}
-		}
-
-		&.bg-bl {
-			background: #fff url('#{$image-path}/global/bg-content-bl.png') no-repeat left bottom;
-			.content-inner {
-				min-height: 260px;
-			}
-		}
-
-		&.bg-br {
-			background: #fff url('#{$image-path}/global/bg-content-br.png') no-repeat right bottom;
-			.content-inner {
-				min-height: 260px;
-			}
-		}
-
-		&.bg-tr-lrg {
-			background: #fff url('#{$image-path}/global/bg-content-tr-lrg.png') no-repeat right top;
-			.content-inner {
-				min-height: 600px;
-			}
-		}
-
-		&.banner, &.banner-tall {
-			background-image: url('#{$image-path}/global/bg-banner-desk-tl.png');
-			.content-inner {
-				height: 364px;
-				padding-top: 160px;
-				h1 {
-					width: 800px;
-				}
-			}
-		}
-
-		&.banner-tall {
-			.content-inner {
-				height: 550px;
-			}
-		}
-
-		&.callout {
-			background-image: url('#{$image-path}/global/bg-callout-desk-tl.png');
-			.content-inner {
-				padding: 100px;
-
-				h2 {
-					font-size: 72px;
-					line-height: 72px;
-				}
-
-			}
 		}
 
 	}

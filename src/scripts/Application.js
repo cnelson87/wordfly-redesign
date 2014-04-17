@@ -10,6 +10,9 @@ var PubSub					= require('./utils/PubSub');
 // var SerializeFormFields		= require('./utils/SerializeFormFields');
 var AppEvents				= require('./events/AppEvents');
 
+var Menu					= require('./widgets/Menu');
+var ContactForm				= require('./widgets/ContactForm');
+var NewsletterForm			= require('./widgets/NewsletterForm');
 
 var Application = {
 
@@ -24,38 +27,18 @@ var Application = {
 		this.$document = $(document);
 		this.$html = $('html');
 		this.$body = $('body');
-		this.$wrapper = $('#wrapper');
-		this.$menu = $('#menu');
-		this.$btnMenu = $('#btn-menu');
-		this.$closeMenu = $('#close-menu');
+
 		this.$mqIndicator = $('#mq-indicator');
 
-		this.isMenuActive = false;
 
 		// Initialize custom events        
 		this.initResizeEndEvent();
 		this.initScrollEndEvent();
 
 
-		this.$btnMenu.on('click', function(e) {
-			e.preventDefault();
-			if (self.isMenuActive) {
-				self.isMenuActive = false;
-				self.$wrapper.removeClass('menu-active');
-				self.$menu.removeClass('active');
-			} else {
-				self.isMenuActive = true;
-				self.$wrapper.addClass('menu-active');
-				self.$menu.addClass('active');
-			}
-		});
-
-		this.$closeMenu.on('click', function(e) {
-			e.preventDefault();
-			self.isMenuActive = false;
-			self.$wrapper.removeClass('menu-active');
-			self.$menu.removeClass('active');
-		});
+		new Menu();
+		new ContactForm();
+		new NewsletterForm();
 
 
 	},

@@ -5,6 +5,10 @@
 
 @include respond-to(small) {
 
+	.address, .phones {
+		display: inline-block;
+		width: 45%;
+	}
 
 }
 

@@ -86,7 +86,11 @@
 
 	}
 
-	#SubscribeForm {
+	#newsletterForm {
+
+		.thank-you {
+			color: #a0d0f1;
+		}
 
 		label {
 			display: block;
@@ -97,14 +101,29 @@
 			margin-bottom: 0.5em;
 		}
 
+		input[type=submit] {
+			color: #fff;
+			font-size: 12px;
+			font-weight: bold;
+			width: auto;
+			min-width: 50px;
+			height: 26px;
+			background-color: #254052;
+			border: 2px solid #3a566d;
+			border-radius: 3px;
+			padding: 2px 8px;
+		}
+
 		input[type=email] {
 			color: #fff;
 			font-size: 12px;
-			width: 100%;
+			@include calc(width, "100% - 58px");
 			height: 26px;
-			background-color: #3e5b71;
+			background-color: #254052;
+			border: 2px solid #3a566d;
+			border-radius: 3px;
+			padding: 2px 8px;
 		}
-
 		::-webkit-input-placeholder {
 			color: #fff;
 		}

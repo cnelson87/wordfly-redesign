@@ -31,7 +31,7 @@
 
 					<h2 class="bordered">Contact Us</h2>
 
-					<form id="emailForm" name="emailForm" onsubmit="return contactValidation();" method="POST"
+					<form id="contactForm" name="contactForm" method="POST" onsubmit="return contactValidation();"
 						action="http://www.wordfly.com/wp-content/themes/wordfly/contact-form.php">
 
 						<fieldset>
@@ -63,7 +63,9 @@
 
 						<p class="req-note">* Required Field</p>
 
-						<input type="submit" id="submit" name="submit" value="Email Us" />
+						<div class="form-btns">
+							<input type="submit" id="submit" name="submit" value="Email Us" />
+						</div>
 
 					</form>
 
@@ -73,7 +75,7 @@
 
 					<h2 class="bordered">Find Us</h2>
 
-					<img class="map" src="/_assets/images/contact/map.png" alt="map" />
+					<a class="map" href="https://www.google.com/maps/place/1326+5th+Ave+%23800/@47.6096102,-122.3342154,17z/data=!3m1!4b1!4m2!3m1!1s0x54906ab46dbd3219:0xeba222fc4788dd0e" target="_blank"><img src="/_assets/images/contact/map.png" alt="map" /></a>
 
 					<p class="address">1326 5th Ave, Suite 800<br />Seattle, WA 98101</p>
 
