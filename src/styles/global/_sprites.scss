@@ -26,6 +26,14 @@
 	background: transparent url('#{$image-path}/global/sprites.png') no-repeat -200px 0;
 }
 
+.icon-WordFly {
+	display: inline-block;
+	width: 22px;
+	height: 19px;
+	@include hide-text;
+	background: transparent url('#{$image-path}/global/sprites.png') no-repeat -230px 0;
+}
+
 .social-btn, .social-btn-alt {
 	display: inline-block;
 	width: 42px;

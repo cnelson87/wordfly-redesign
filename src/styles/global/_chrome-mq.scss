@@ -83,11 +83,21 @@
 	#footer .footer-inner {
 		width: 1000px;
 		height: 120px;
-		padding: 20px 0;
-		text-align: right;
+		padding: 20px 0 0 0;
 
-		.share-nav {
+		.col-top-left {
 			float: left;
+			width: 50%;
+		}
+
+		.col-bot-right {
+			float: right;
+			width: 50%;
+			text-align: right;
+		}
+
+		.icon-WordFly {
+			margin-right: 8px;
 		}
 
 	}

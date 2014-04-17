@@ -105,18 +105,24 @@ html, body {
 		@include clearfix;
 		@include prefix(box-sizing, border-box);
 
-		.share-nav {
-			margin-bottom: 4px;
-			.social-btn,
-			.social-btn-alt {
-				margin-right: 8px;
-			}
+		.footer-inner-column {
+			margin-bottom: 24px;
+			@include prefix(box-sizing, border-box);
+		}
+
+		a {
+			white-space: nowrap;
 		}
 
 		p {
 			font-size: 11px;
-			line-height: 14px;
-			margin: 8px 0 0 0;
+			line-height: 19px;
+			margin: 0;
+		}
+
+		.icon-WordFly {
+			vertical-align: top;
+			margin-right: 4px;
 		}
 
 	}
