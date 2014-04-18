@@ -31,14 +31,14 @@
 
 					<h2 class="bordered">Contact Us</h2>
 
-					<form id="contactForm" name="contactForm" method="POST" onsubmit="return contactValidation();"
+					<form id="contactForm" name="contactForm" method="POST"
 						action="http://www.wordfly.com/wp-content/themes/wordfly/contact-form.php">
-
 						<fieldset>
+
 							<ol class="vertical-fields">
 								<li>
-									<label for="fSubject">What’s this about?</label>
-									<select id="fSubject" name="fSubject" required>
+									<label for="cfSubject">What’s this about?</label>
+									<select id="cfSubject" name="cfSubject" required>
 										<option value="Get Started">Get Started</option>
 										<option value="High Volume Pricing">High Volume Pricing</option>
 										<option value="Technical Support &amp; Help">Technical Support &amp; Help</option>
@@ -47,26 +47,26 @@
 									</select>
 								</li>
 								<li>
-									<label for="fName">Your Name</label>
-									<input type="text" id="fName" name="fName" required />
+									<label for="cfName">Your Name</label>
+									<input type="text" id="cfName" name="cfName" required />
 								</li>
 								<li>
-									<label for="fEmailAddress">Email Address</label>
-									<input type="email" id="fEmailAddress" name="fEmailAddress" required />
+									<label for="cfEmail">Email Address</label>
+									<input type="email" id="cfEmail" name="cfEmail" required />
 								</li>
 								<li>
-									<label for="fMessage">What’s on your mind?</label>
-									<textarea id="fMessage" name="fMessage" required></textarea>
+									<label for="cfMessage">What’s on your mind?</label>
+									<textarea id="cfMessage" name="cfMessage" required></textarea>
 								</li>
 							</ol>
+
+							<!-- <p class="req-note">* Required Field</p> -->
+
+							<div class="form-btns">
+								<input type="submit" id="cfSubmit" name="cfSubmit" value="Email Us" />
+							</div>
+
 						</fieldset>
-
-						<!-- <p class="req-note">* Required Field</p> -->
-
-						<div class="form-btns">
-							<input type="submit" id="submit" name="submit" value="Email Us" />
-						</div>
-
 					</form>
 
 				</div>

@@ -10,7 +10,7 @@ var PubSub					= require('./utils/PubSub');
 // var SerializeFormFields		= require('./utils/SerializeFormFields');
 var AppEvents				= require('./events/AppEvents');
 
-var Menu					= require('./widgets/Menu');
+var FlyoutMenu				= require('./widgets/FlyoutMenu');
 var ContactForm				= require('./widgets/ContactForm');
 var NewsletterForm			= require('./widgets/NewsletterForm');
 
@@ -30,15 +30,20 @@ var Application = {
 
 		this.$mqIndicator = $('#mq-indicator');
 
+		this.bodyID = this.$body.attr('id');
 
-		// Initialize custom events        
+
+		// Initialize custom events
 		this.initResizeEndEvent();
 		this.initScrollEndEvent();
 
 
-		new Menu();
-		new ContactForm();
+		// Initialize widgets
+		new FlyoutMenu();
 		new NewsletterForm();
+		if (this.bodyID === 'contact-page') {
+			new ContactForm();
+		}
 
 
 	},

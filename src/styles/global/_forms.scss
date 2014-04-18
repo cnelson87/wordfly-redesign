@@ -327,7 +327,7 @@ ol.vertical-fields, ul.vertical-fields,
 ol.inline-fields, ul.inline-fields,
 ol.column-fields, ul.column-fields {
 	list-style: none;
-	margin: 0;
+	margin: 0 0 18px 0;
 }
 	.horizontal-fields > li,
 	.vertical-fields > li,
@@ -424,7 +424,7 @@ ol.column-fields, ul.column-fields {
 /* use with .vertical-fields or .inline-fields */
 ol.cb-rb-fields, ul.cb-rb-fields {
 	list-style: none;
-	margin: 0;
+	margin: 0 0 18px 0;
 }
 	.cb-rb-fields > li {
 		min-height: 18px;
@@ -470,6 +470,7 @@ ol.cb-rb-fields, ul.cb-rb-fields {
 	clear: both;
 	@include clearfix;
 	margin: 0 0 18px 0;
+	padding-top: 18px;
 }
 
 /*** /fieldset styles ***/

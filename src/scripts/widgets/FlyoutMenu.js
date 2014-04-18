@@ -1,17 +1,17 @@
 /*
-	TITLE: Menu
+	TITLE: FlyoutMenu
 
-	DESCRIPTION: The flyout Menu
+	DESCRIPTION: The Flyout Menu
 
 	AUTHORS: CN
 
 	DEPENDENCIES:
-		- jQuery 1.8+
+		- jQuery 1.10+
 
 */
 
 
-var Menu = function() {
+var FlyoutMenu = function() {
 
 	var $wrapper = $('#wrapper');
 	var $menu = $('#menu');
@@ -19,7 +19,6 @@ var Menu = function() {
 	var $closeMenu = $('#close-menu');
 
 	var isMenuActive = false;
-
 
 	$btnMenu.on('click', function(e) {
 		e.preventDefault();
@@ -34,7 +33,6 @@ var Menu = function() {
 		}
 	});
 
-
 	$closeMenu.on('click', function(e) {
 		e.preventDefault();
 		isMenuActive = false;
@@ -42,8 +40,7 @@ var Menu = function() {
 		$menu.removeClass('active');
 	});
 
-
 };
 
 
-module.exports = Menu;
+module.exports = FlyoutMenu;
